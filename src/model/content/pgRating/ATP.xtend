@@ -1,5 +1,5 @@
 package model.content.pgRating
 
-class ATP {
-	
+class ATP implements AgeCategory{
+	override getName() {"ATP"}
 }
