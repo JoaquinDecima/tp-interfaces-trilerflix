@@ -38,6 +38,9 @@ local.properties
 .loadpath
 .recomendadores
 
+#Se Agrega XtendBin y aledaños (LSD)
+.xtendbin
+
 # Constructores de herramientas externas
 .externalToolBuilders /
 
