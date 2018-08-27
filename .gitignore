@@ -21,3 +21,138 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+
+# Creado por https://www.gitignore.io/api/java,linux,eclipse,windows
+
+### Eclipse ###
+
+.metadata
+compartimiento/
+tmp /
+* .tmp
+* .bak
+* .swp
+* ~ .nib
+local.properties
+.settings /
+.loadpath
+.recomendadores
+
+# Constructores de herramientas externas
+.externalToolBuilders /
+
+# Configuraciones de lanzamiento de Eclipse "almacenadas localmente"
+*.lanzamiento
+
+# PyDev específico (Python IDE para Eclipse)
+* .pydevproject
+
+# CDT-specific (Herramientas de desarrollo C / C ++)
+.cproject
+
+# CDT- autotools
+.autotools
+
+# Java anotación procesador (APT)
+.factorypath
+
+# PDT-specific (Herramientas de desarrollo PHP)
+.Construir camino
+
+# sbteclipse plugin
+.objetivo
+
+# Tern plugin
+.tern-project
+
+# Complemento TeXlipse
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recomendadores /
+
+# Procesamiento de anotación
+.apt_generated /
+
+# Scala IDE específico (desarrollo de Scala y Java para Eclipse)
+.cache-main
+.scala_dependencies
+.hoja de cálculo
+
+### Parche Eclipse ###
+# Eclipse Core
+.proyecto
+
+# JDT-specific (Herramientas de desarrollo Eclipse Java)
+.classpath
+
+# Procesamiento de anotación
+.apt_generated
+
+### Java ###
+# Archivo de clase compilado
+*.clase
+
+# Archivo de registro
+*.Iniciar sesión
+
+# Archivos BlueJ
+* .ctxt
+
+# Herramientas móviles para Java (J2ME)
+.mtj.tmp /
+
+# Archivos de paquete #
+*.tarro
+*.guerra
+* .nar
+*.oreja
+*.cremallera
+* .tar.gz
+* .rar
+
+# registros de bloqueo de máquinas virtuales, consulte http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid *
+
+### Linux ###
+* ~
+
+# archivos temporales que se pueden crear si un proceso todavía tiene un identificador abierto de un archivo eliminado
+.fuse_hidden *
+
+# Preferencias de directorio KDE
+.directorio
+
+# Carpeta de basura Linux que puede aparecer en cualquier partición o disco
+.Basura-*
+
+Los archivos # .nfs se crean cuando se elimina un archivo abierto pero aún se está accediendo
+.nfs *
+
+### Windows ###
+# Archivos de caché de miniaturas de Windows
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+
+# Archivo de volcado
+* .stackdump
+
+# Archivo de configuración de carpeta
+[Dd] esktop.ini
+
+# Papelera de reciclaje utilizada en archivos compartidos
+$ RECYCLE.BIN /
+
+# Archivos de Windows Installer
+*.taxi
+* .msi
+* .msix
+* .msm
+* .msp
+
+# Accesos directos de Windows
+* .lnk
