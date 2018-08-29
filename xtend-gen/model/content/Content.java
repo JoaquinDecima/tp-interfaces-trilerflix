@@ -1,69 +1,69 @@
 package model.content;
 
-import java.util.ArrayList;
+import java.util.List;
+import model.content.genre.Genre;
 import model.content.pgRating.AgeCategory;
 
 @SuppressWarnings("all")
-public interface Content {
-  public final static int id;
+public abstract class Content {
+  private int id;
   
-  public final static String title;
+  private String title;
   
-  public final static String category;
+  private List<Genre> genres;
   
-  public final static AgeCategory clasification;
+  private AgeCategory clasification;
   
-  public final static int duration;
+  private int runtime;
   
-  public final static ArrayList<Content> similarContent = new ArrayList<Content>();
+  private List<Content> similarContent;
   
   /**
    * Getters
    */
-  public default int getID() {
-    return Content.id;
+  public int getID() {
+    return this.id;
   }
   
-  public default String getTitle() {
-    return this.getTitle();
+  public String getTitle() {
+    return this.title;
   }
   
-  public default String getCategory() {
-    return this.getCategory();
+  public List<Genre> getGenres() {
+    return this.genres;
   }
   
-  public default AgeCategory getCasification() {
-    return Content.clasification;
+  public AgeCategory getCasification() {
+    return this.clasification;
   }
   
-  public default int getDuration() {
+  public int getDuration() {
     return this.getDuration();
   }
   
-  public default ArrayList<String> getSimilarContent() {
-    return this.getSimilarContent();
+  public List<Content> getSimilarContent() {
+    return this.similarContent;
   }
   
   /**
    * Setters
    */
-  public default Object setTitle(final String sTitle) {
-    return this.setTitle(sTitle);
+  public void setTitle(final String sTitle) {
+    this.title = sTitle;
   }
   
-  public default Object setCategory(final String sCategory) {
-    return this.setCategory(sCategory);
+  public void setGenres(final List<Genre> sGenres) {
+    this.genres = sGenres;
   }
   
-  public default Object setDuration(final int iDuration) {
-    return this.setDuration(iDuration);
+  public void setDuration(final int sRuntime) {
+    this.runtime = sRuntime;
   }
   
   /**
    * Manejo de Contenido similar
    */
-  public default boolean addSimilarContent(final Content cNewContent) {
-    throw new Error("Unresolved compilation problems:"
-      + "\nType mismatch: cannot convert from Content to String");
+  public void addSimilarContent(final Content cNewContent) {
+    this.similarContent.add(cNewContent);
   }
 }

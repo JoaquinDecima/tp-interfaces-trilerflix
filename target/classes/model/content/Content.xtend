@@ -1,15 +1,17 @@
 package model.content
 
 import model.content.pgRating.AgeCategory
+import model.content.genre.Genre
 import java.util.ArrayList
+import java.util.List
 
-interface Content {
-	int id;
-	String title;
-	String category;
-	AgeCategory clasification;
-	int duration;
-	ArrayList<Content> similarContent = new ArrayList<Content>();
+abstract class Content {
+	int id
+	String title
+	List<Genre> genres
+	AgeCategory clasification
+	int runtime;
+	List<Content> similarContent; // = new ArrayList<Content>();
 	
 	/*
 	 * Getters
@@ -27,13 +29,13 @@ interface Content {
 	 }
 	 
 	 //Retorna categoria
-	 def String getCategory(){
-	 	return(this.category);
+	 def List<Genre> getGenres(){
+	 	return this.genres;
 	 }
 	 
 	 //Retorna clasificacion
 	 def AgeCategory getCasification(){
-	 	return(this.clasification);
+	 	return this.clasification;
 	 }
 	 
 	 //Retorna duracion
@@ -41,7 +43,7 @@ interface Content {
 	 	return (this.duration);
 	 }
 	 
-	 def ArrayList<String> getSimilarContent(){
+	 def List<Content> getSimilarContent(){
 	 	return (this.similarContent);
 	 }
 	 
@@ -51,18 +53,18 @@ interface Content {
 	  */
 	  
 	  //Setea Nuevo Titulo
-	  def setTitle(String sTitle){
+	  def void setTitle(String sTitle){
 	  	this.title = sTitle;
 	  }
 	  
 	  //Setea nueva categoria
-	  def setCategory(String sCategory){
-	  	this.category = sCategory;
+	  def void setGenres(List<Genre> sGenres){
+	  	this.genres = sGenres
 	  }
 	  
 	  //Setea Duracion
-	  def setDuration(int iDuration){
-	  	this.duration = iDuration;
+	  def void setDuration(int sRuntime){
+	  	this.runtime = sRuntime;
 	  }
 	  
 	  
@@ -72,7 +74,7 @@ interface Content {
 	   */
 	   
 	   //Agrega nuevo contenido similar
-	   def addSimilarContent(Content cNewContent){
-	   	 this.similarContent.add(cNewContent);		// TODO: Error de String que no entiendo 
+	   def void addSimilarContent(Content cNewContent){
+	   	 this.similarContent.add( cNewContent);		
 	   }
 }
